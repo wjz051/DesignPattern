@@ -69,16 +69,22 @@
   <ItemGroup>
     <ClInclude Include="Adapter.h" />
     <ClInclude Include="Bridge.h" />
+    <ClInclude Include="Command.h" />
     <ClInclude Include="Composite.h" />
     <ClInclude Include="Decorator.h" />
     <ClInclude Include="Facade.h" />
     <ClInclude Include="Flyweight.h" />
+    <ClInclude Include="Interpreter.h" />
+    <ClInclude Include="Iterator.h" />
+    <ClInclude Include="Mediator.h" />
     <ClInclude Include="Memento.h" />
     <ClInclude Include="Observer.h" />
     <ClInclude Include="Proxy.h" />
+    <ClInclude Include="Responsibility.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="Strategy.h" />
     <ClInclude Include="Template.h" />
+    <ClInclude Include="Visitor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

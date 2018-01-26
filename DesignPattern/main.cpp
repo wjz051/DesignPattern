@@ -14,7 +14,12 @@ using namespace std;
 //#include "State.h"
 //#include "Observer.h"
 #include "Memento.h"
-#include "Mediator.h"
+//#include "Mediator.h"
+#include "Command.h"
+#include "Visitor.h"
+#include "Responsibility.h"
+#include "Iterator.h"
+//#include "Interpreter.h"
 
 void StructurePattern()
 {
@@ -105,7 +110,7 @@ void BehaviorPattern()
 	o->RestoreToMemento(m); //»Ö¸´ÐÞ¸ÄÇ°×´Ì¬
 	o->PrintState();
 
-	/*Mediator*/
+	/*Mediator
 	ConcreteMediator* Mediator = new	ConcreteMediator();
 	ConcreteColleageA* c1 = new	ConcreteColleageA(Mediator);
 	ConcreteColleageB* c2 = new	ConcreteColleageB(Mediator);
@@ -121,7 +126,38 @@ void BehaviorPattern()
 	cout << endl;
 	c2->SetState("old");
 	c2->Aciton();
-	c1->Aciton();
+	c1->Aciton();*/
+
+	/*Command*/
+	Reciever* rev = new Reciever();
+	Command* cmd = new ConcreteCommand(rev);
+	Invoker* inv = new Invoker(cmd);
+	inv->Invoke();
+
+	/*Visitor*/
+	Visitor* vis = new ConcreteVisitorA();
+	Element* elm = new ConcreteElementA();
+	elm->Accept(vis);
+
+	/*Responsibility*/
+	Handle* h1 = new ConcreteHandleA();
+	Handle* h2 = new ConcreteHandleB();
+	h1->SetSuccessor(h2);
+	h1->HandleRequest();
+
+	/*Iterator*/
+	Aggregate* ag = new ConcreteAggregate();
+	Iterator* it = new ConcreteIterator(ag);
+	for (; !(it->IsDone()); it->Next())
+	{
+		cout << it->CurrentItem() << endl;
+	}
+
+	/*Interpreter
+	Context* ct = new Context();
+	AbstractExpression* te = new TerminalExpression("hello");
+	AbstractExpression* nte = new NonterminalExpression(te, 2);
+	nte->Interpret(*ct);*/
 	
 }
 

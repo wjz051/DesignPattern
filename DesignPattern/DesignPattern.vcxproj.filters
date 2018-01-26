@@ -59,7 +59,25 @@
     <ClInclude Include="Observer.h">
       <Filter>头文件\行为型</Filter>
     </ClInclude>
+    <ClInclude Include="Mediator.h">
+      <Filter>头文件\行为型</Filter>
+    </ClInclude>
     <ClInclude Include="Memento.h">
+      <Filter>头文件\行为型</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Visitor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Responsibility.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Iterator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpreter.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
